@@ -43,5 +43,5 @@
     "@xterm/addon-webgl": "^0.18.0",
     "@xterm/xterm": "^5.5.0"
   },
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@1.22.22"
 }
