@@ -4,3 +4,4 @@ dist
 venv
 .aws
 src/dsRootFS.ts
+package-lock.json
