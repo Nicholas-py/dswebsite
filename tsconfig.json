@@ -8,8 +8,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
+    "module": "esnext",
+    "target": "es2020",
     "allowJs": true,
     "moduleResolution": "node",
     "preserveSymlinks": true
