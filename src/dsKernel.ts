@@ -1,4 +1,4 @@
-import '@xterm/xterm/css/xterm.css';
+import '../vendor/xterm-fork/css/xterm.css';
 
 import { DSFileInfo, DSFileSystem, DSIDirectory, DSIDirectoryInvalidPathError } from "./dsFileSystem";
 import { DSKeyEvent, DSPointerEvent, DSTerminal } from "./dsTerminal";
