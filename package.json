@@ -23,7 +23,8 @@
     "typescript": "^5.8.3",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.1.0",
+    "wrangler": "^4.107.0"
   },
   "scripts": {
     "helpit": "webpack --help=verbose",
@@ -34,9 +35,10 @@
     "watch": "ts-node scripts/generaterootfs.ts && webpack --watch",
     "serve": "ts-node scripts/generaterootfs.ts && webpack serve --mode=development",
     "test": "jest",
-    "webtests": "RUN_WEB_TESTS=true jest"
+    "webtests": "RUN_WEB_TESTS=true jest",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "packageManager": "yarn@1.22.22"
 }
