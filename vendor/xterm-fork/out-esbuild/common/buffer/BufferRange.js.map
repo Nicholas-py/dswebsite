@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/common/buffer/BufferRange.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2021 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { IBufferRange } from '@xterm/xterm';\r\n\r\nexport function getRangeLength(range: IBufferRange, bufferCols: number): number {\r\n  if (range.start.y > range.end.y) {\r\n    throw new Error(`Buffer range end (${range.end.x}, ${range.end.y}) cannot be before start (${range.start.x}, ${range.start.y})`);\r\n  }\r\n  return bufferCols * (range.end.y - range.start.y) + (range.end.x - range.start.x + 1);\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAOO,SAAS,eAAe,OAAqB,YAA4B;AAC9E,MAAI,MAAM,MAAM,IAAI,MAAM,IAAI,GAAG;AAC/B,UAAM,IAAI,MAAM,qBAAqB,MAAM,IAAI,CAAC,KAAK,MAAM,IAAI,CAAC,6BAA6B,MAAM,MAAM,CAAC,KAAK,MAAM,MAAM,CAAC,GAAG;AAAA,EACjI;AACA,SAAO,cAAc,MAAM,IAAI,IAAI,MAAM,MAAM,MAAM,MAAM,IAAI,IAAI,MAAM,MAAM,IAAI;AACrF;",
+  "names": []
+}

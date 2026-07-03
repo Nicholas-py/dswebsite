@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/browser/selection/Types.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2017 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nexport interface ISelectionRedrawRequestEvent {\r\n  start: [number, number] | undefined;\r\n  end: [number, number] | undefined;\r\n  columnSelectMode: boolean;\r\n}\r\n\r\nexport interface ISelectionRequestScrollLinesEvent {\r\n  amount: number;\r\n  suppressScrollEvent: boolean;\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": []
+}

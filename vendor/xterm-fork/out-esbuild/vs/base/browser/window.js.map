@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/vs/base/browser/window.ts"],
+  "sourcesContent": ["/*---------------------------------------------------------------------------------------------\r\n *  Copyright (c) Microsoft Corporation. All rights reserved.\r\n *  Licensed under the MIT License. See License.txt in the project root for license information.\r\n *--------------------------------------------------------------------------------------------*/\r\n\r\nexport type CodeWindow = Window & typeof globalThis & {\r\n\treadonly vscodeWindowId: number;\r\n};\r\n\r\nexport function ensureCodeWindow(targetWindow: Window, fallbackWindowId: number): asserts targetWindow is CodeWindow {\r\n}\r\n\r\n// eslint-disable-next-line no-restricted-globals\r\nexport const mainWindow = (typeof window === 'object' ? window : globalThis) as CodeWindow;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASO,SAAS,iBAAiB,cAAsB,kBAA8D;AACrH;AAGO,MAAM,aAAc,OAAO,WAAW,WAAW,SAAS;",
+  "names": []
+}

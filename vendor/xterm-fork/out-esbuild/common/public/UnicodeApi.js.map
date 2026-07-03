@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/common/public/UnicodeApi.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2021 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { ICoreTerminal } from 'common/Types';\r\nimport { IUnicodeHandling, IUnicodeVersionProvider } from '@xterm/xterm';\r\n\r\nexport class UnicodeApi implements IUnicodeHandling {\r\n  constructor(private _core: ICoreTerminal) { }\r\n\r\n  public register(provider: IUnicodeVersionProvider): void {\r\n    this._core.unicodeService.register(provider);\r\n  }\r\n\r\n  public get versions(): string[] {\r\n    return this._core.unicodeService.versions;\r\n  }\r\n\r\n  public get activeVersion(): string {\r\n    return this._core.unicodeService.activeVersion;\r\n  }\r\n\r\n  public set activeVersion(version: string) {\r\n    this._core.unicodeService.activeVersion = version;\r\n  }\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQO,MAAM,WAAuC;AAAA,EAClD,YAAoB,OAAsB;AAAtB;AAAA,EAAwB;AAAA,EAErC,SAAS,UAAyC;AACvD,SAAK,MAAM,eAAe,SAAS,QAAQ;AAAA,EAC7C;AAAA,EAEA,IAAW,WAAqB;AAC9B,WAAO,KAAK,MAAM,eAAe;AAAA,EACnC;AAAA,EAEA,IAAW,gBAAwB;AACjC,WAAO,KAAK,MAAM,eAAe;AAAA,EACnC;AAAA,EAEA,IAAW,cAAc,SAAiB;AACxC,SAAK,MAAM,eAAe,gBAAgB;AAAA,EAC5C;AACF;",
+  "names": []
+}

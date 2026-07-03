@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/common/services/CharsetService.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2019 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { ICharsetService } from 'common/services/Services';\r\nimport { ICharset } from 'common/Types';\r\n\r\nexport class CharsetService implements ICharsetService {\r\n  public serviceBrand: any;\r\n\r\n  public charset: ICharset | undefined;\r\n  public glevel: number = 0;\r\n\r\n  private _charsets: (ICharset | undefined)[] = [];\r\n\r\n  public reset(): void {\r\n    this.charset = undefined;\r\n    this._charsets = [];\r\n    this.glevel = 0;\r\n  }\r\n\r\n  public setgLevel(g: number): void {\r\n    this.glevel = g;\r\n    this.charset = this._charsets[g];\r\n  }\r\n\r\n  public setgCharset(g: number, charset: ICharset | undefined): void {\r\n    this._charsets[g] = charset;\r\n    if (this.glevel === g) {\r\n      this.charset = charset;\r\n    }\r\n  }\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQO,MAAM,eAA0C;AAAA,EAAhD;AAIL,SAAO,SAAiB;AAExB,SAAQ,YAAsC,CAAC;AAAA;AAAA,EAExC,QAAc;AACnB,SAAK,UAAU;AACf,SAAK,YAAY,CAAC;AAClB,SAAK,SAAS;AAAA,EAChB;AAAA,EAEO,UAAU,GAAiB;AAChC,SAAK,SAAS;AACd,SAAK,UAAU,KAAK,UAAU,CAAC;AAAA,EACjC;AAAA,EAEO,YAAY,GAAW,SAAqC;AACjE,SAAK,UAAU,CAAC,IAAI;AACpB,QAAI,KAAK,WAAW,GAAG;AACrB,WAAK,UAAU;AAAA,IACjB;AAAA,EACF;AACF;",
+  "names": []
+}

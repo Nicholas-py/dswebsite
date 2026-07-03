@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../test/playwright/Renderer.test.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2019 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { test } from '@playwright/test';\r\nimport { ITestContext, createTestContext, openTerminal } from './TestUtils';\r\nimport { ISharedRendererTestContext, injectSharedRendererTestsStandalone, injectSharedRendererTests } from './SharedRendererTests';\r\n\r\nlet ctx: ITestContext;\r\nconst ctxWrapper: ISharedRendererTestContext = {\r\n  value: undefined,\r\n  skipDomExceptions: true\r\n} as any;\r\ntest.beforeAll(async ({ browser }) => {\r\n  ctx = await createTestContext(browser);\r\n  ctxWrapper.value = ctx;\r\n  await openTerminal(ctx);\r\n});\r\ntest.afterAll(async () => await ctx.page.close());\r\n\r\ntest.describe('DOM Renderer Integration Tests', () => {\r\n  injectSharedRendererTests(ctxWrapper);\r\n  injectSharedRendererTestsStandalone(ctxWrapper, () => {});\r\n});\r\n"],
+  "mappings": ";AAKA,kBAAqB;AACrB,uBAA8D;AAC9D,iCAA2G;AAP3G;AAAA;AAAA;AAAA;AASA,IAAI;AACJ,MAAM,aAAyC;AAAA,EAC7C,OAAO;AAAA,EACP,mBAAmB;AACrB;AACA,iBAAK,UAAU,OAAO,EAAE,QAAQ,MAAM;AACpC,QAAM,UAAM,oCAAkB,OAAO;AACrC,aAAW,QAAQ;AACnB,YAAM,+BAAa,GAAG;AACxB,CAAC;AACD,iBAAK,SAAS,YAAY,MAAM,IAAI,KAAK,MAAM,CAAC;AAEhD,iBAAK,SAAS,kCAAkC,MAAM;AACpD,4DAA0B,UAAU;AACpC,sEAAoC,YAAY,MAAM;AAAA,EAAC,CAAC;AAC1D,CAAC;",
+  "names": []
+}

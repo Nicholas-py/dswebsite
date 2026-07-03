@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/browser/services/LinkProviderService.ts"],
+  "sourcesContent": ["import { ILinkProvider, ILinkProviderService } from 'browser/services/Services';\r\nimport { Disposable, toDisposable } from 'vs/base/common/lifecycle';\r\nimport { IDisposable } from 'common/Types';\r\n\r\nexport class LinkProviderService extends Disposable implements ILinkProviderService {\r\n  declare public serviceBrand: undefined;\r\n\r\n  public readonly linkProviders: ILinkProvider[] = [];\r\n\r\n  constructor() {\r\n    super();\r\n    this._register(toDisposable(() => this.linkProviders.length = 0));\r\n  }\r\n\r\n  public registerLinkProvider(linkProvider: ILinkProvider): IDisposable {\r\n    this.linkProviders.push(linkProvider);\r\n    return {\r\n      dispose: () => {\r\n        // Remove the link provider from the list\r\n        const providerIndex = this.linkProviders.indexOf(linkProvider);\r\n\r\n        if (providerIndex !== -1) {\r\n          this.linkProviders.splice(providerIndex, 1);\r\n        }\r\n      }\r\n    };\r\n  }\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,uBAAyC;AAGlC,MAAM,4BAA4B,4BAA2C;AAAA,EAKlF,cAAc;AACZ,UAAM;AAHR,SAAgB,gBAAiC,CAAC;AAIhD,SAAK,cAAU,+BAAa,MAAM,KAAK,cAAc,SAAS,CAAC,CAAC;AAAA,EAClE;AAAA,EAEO,qBAAqB,cAA0C;AACpE,SAAK,cAAc,KAAK,YAAY;AACpC,WAAO;AAAA,MACL,SAAS,MAAM;AAEb,cAAM,gBAAgB,KAAK,cAAc,QAAQ,YAAY;AAE7D,YAAI,kBAAkB,IAAI;AACxB,eAAK,cAAc,OAAO,eAAe,CAAC;AAAA,QAC5C;AAAA,MACF;AAAA,IACF;AAAA,EACF;AACF;",
+  "names": []
+}

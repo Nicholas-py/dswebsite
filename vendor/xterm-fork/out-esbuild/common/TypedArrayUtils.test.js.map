@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/common/TypedArrayUtils.test.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2018 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\nimport { assert } from 'chai';\r\nimport { concat } from 'common/TypedArrayUtils';\r\n\r\ntype TypedArray = Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Int8Array | Int16Array | Int32Array | Float32Array | Float64Array;\r\n\r\nfunction deepEquals(a: TypedArray, b: TypedArray): void {\r\n  assert.equal(a.length, b.length);\r\n  for (let i = 0; i < a.length; ++i) {\r\n    assert.equal(a[i], b[i]);\r\n  }\r\n}\r\n\r\ndescribe('typed array convenience functions', () => {\r\n  it('concat', () => {\r\n    const a = new Uint8Array([1, 2, 3, 4, 5]);\r\n    const b = new Uint8Array([6, 7, 8, 9, 0]);\r\n    const merged = concat(a, b);\r\n    deepEquals(merged, new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));\r\n  });\r\n});\r\n"],
+  "mappings": ";AAIA,kBAAuB;AACvB,6BAAuB;AALvB;AAAA;AAAA;AAAA;AASA,SAAS,WAAW,GAAe,GAAqB;AACtD,qBAAO,MAAM,EAAE,QAAQ,EAAE,MAAM;AAC/B,WAAS,IAAI,GAAG,IAAI,EAAE,QAAQ,EAAE,GAAG;AACjC,uBAAO,MAAM,EAAE,CAAC,GAAG,EAAE,CAAC,CAAC;AAAA,EACzB;AACF;AAEA,SAAS,qCAAqC,MAAM;AAClD,KAAG,UAAU,MAAM;AACjB,UAAM,IAAI,IAAI,WAAW,CAAC,GAAG,GAAG,GAAG,GAAG,CAAC,CAAC;AACxC,UAAM,IAAI,IAAI,WAAW,CAAC,GAAG,GAAG,GAAG,GAAG,CAAC,CAAC;AACxC,UAAM,aAAS,+BAAO,GAAG,CAAC;AAC1B,eAAW,QAAQ,IAAI,WAAW,CAAC,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,GAAG,CAAC,CAAC,CAAC;AAAA,EACnE,CAAC;AACH,CAAC;",
+  "names": []
+}

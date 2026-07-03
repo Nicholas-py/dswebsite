@@ -1,0 +1,1 @@
+{"version":3,"file":"window.d.ts","sourceRoot":"","sources":["../../../../src/vs/base/browser/window.ts"],"names":[],"mappings":"AAKA,MAAM,MAAM,UAAU,GAAG,MAAM,GAAG,OAAO,UAAU,GAAG;IACrD,QAAQ,CAAC,cAAc,EAAE,MAAM,CAAC;CAChC,CAAC;AAEF,wBAAgB,gBAAgB,CAAC,YAAY,EAAE,MAAM,EAAE,gBAAgB,EAAE,MAAM,GAAG,OAAO,CAAC,YAAY,IAAI,UAAU,CACnH;AAGD,eAAO,MAAM,UAAU,EAAyD,UAAU,CAAC"}

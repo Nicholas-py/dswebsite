@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/browser/shared/Constants.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2024 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nexport const enum ViewportConstants {\r\n  DEFAULT_SCROLL_BAR_WIDTH = 14\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAKO,IAAW,oBAAX,kBAAWA,uBAAX;AACL,EAAAA,sCAAA,8BAA2B,MAA3B;AADgB,SAAAA;AAAA,GAAA;",
+  "names": ["ViewportConstants"]
+}

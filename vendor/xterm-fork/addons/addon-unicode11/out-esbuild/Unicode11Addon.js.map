@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/Unicode11Addon.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2019 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n *\r\n * UnicodeVersionProvider for V11.\r\n */\r\n\r\nimport type { Terminal, ITerminalAddon } from '@xterm/xterm';\r\nimport type { Unicode11Addon as IUnicode11Api } from '@xterm/addon-unicode11';\r\nimport { UnicodeV11 } from './UnicodeV11';\r\n\r\nexport class Unicode11Addon implements ITerminalAddon , IUnicode11Api {\r\n  public activate(terminal: Terminal): void {\r\n    terminal.unicode.register(new UnicodeV11());\r\n  }\r\n  public dispose(): void { }\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AASA,wBAA2B;AAT3B;AAAA;AAAA;AAAA;AAAA;AAAA;AAWO,MAAM,eAAyD;AAAA,EAC7D,SAAS,UAA0B;AACxC,aAAS,QAAQ,SAAS,IAAI,6BAAW,CAAC;AAAA,EAC5C;AAAA,EACO,UAAgB;AAAA,EAAE;AAC3B;",
+  "names": []
+}

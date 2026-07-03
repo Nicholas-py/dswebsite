@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/common/Clone.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2016 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\n/*\r\n * A simple utility for cloning values\r\n */\r\nexport function clone<T>(val: T, depth: number = 5): T {\r\n  if (typeof val !== 'object') {\r\n    return val;\r\n  }\r\n\r\n  // If we're cloning an array, use an array as the base, otherwise use an object\r\n  const clonedObject: any = Array.isArray(val) ? [] : {};\r\n\r\n  for (const key in val) {\r\n    // Recursively clone eack item unless we're at the maximum depth\r\n    clonedObject[key] = depth <= 1 ? val[key] : (val[key] && clone(val[key], depth - 1));\r\n  }\r\n\r\n  return clonedObject as T;\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQO,SAAS,MAAS,KAAQ,QAAgB,GAAM;AACrD,MAAI,OAAO,QAAQ,UAAU;AAC3B,WAAO;AAAA,EACT;AAGA,QAAM,eAAoB,MAAM,QAAQ,GAAG,IAAI,CAAC,IAAI,CAAC;AAErD,aAAW,OAAO,KAAK;AAErB,iBAAa,GAAG,IAAI,SAAS,IAAI,IAAI,GAAG,IAAK,IAAI,GAAG,KAAK,MAAM,IAAI,GAAG,GAAG,QAAQ,CAAC;AAAA,EACpF;AAEA,SAAO;AACT;",
+  "names": []
+}

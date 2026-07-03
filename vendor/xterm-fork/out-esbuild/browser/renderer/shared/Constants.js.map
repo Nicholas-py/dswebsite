@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/browser/renderer/shared/Constants.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2017 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { isFirefox, isLegacyEdge } from 'common/Platform';\r\n\r\nexport const INVERTED_DEFAULT_COLOR = 257;\r\n\r\nexport const DIM_OPACITY = 0.5;\r\n// The text baseline is set conditionally by browser. Using 'ideographic' for Firefox or Legacy Edge\r\n// would result in truncated text (Issue 3353). Using 'bottom' for Chrome would result in slightly\r\n// unaligned Powerline fonts (PR 3356#issuecomment-850928179).\r\nexport const TEXT_BASELINE: CanvasTextBaseline = isFirefox || isLegacyEdge ? 'bottom' : 'ideographic';\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAKA,sBAAwC;AALxC;AAAA;AAAA;AAAA;AAOO,MAAM,yBAAyB;AAE/B,MAAM,cAAc;AAIpB,MAAM,gBAAoC,6BAAa,+BAAe,WAAW;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/common/TypedArrayUtils.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2018 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nexport type TypedArray = Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Int8Array | Int16Array | Int32Array | Float32Array | Float64Array;\r\n\r\n/**\r\n * Concat two typed arrays `a` and `b`.\r\n * Returns a new typed array.\r\n */\r\nexport function concat<T extends TypedArray>(a: T, b: T): T {\r\n  const result = new (a.constructor as any)(a.length + b.length);\r\n  result.set(a);\r\n  result.set(b, a.length);\r\n  return result;\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAWO,SAAS,OAA6B,GAAM,GAAS;AAC1D,QAAM,SAAS,IAAK,EAAE,YAAoB,EAAE,SAAS,EAAE,MAAM;AAC7D,SAAO,IAAI,CAAC;AACZ,SAAO,IAAI,GAAG,EAAE,MAAM;AACtB,SAAO;AACT;",
+  "names": []
+}

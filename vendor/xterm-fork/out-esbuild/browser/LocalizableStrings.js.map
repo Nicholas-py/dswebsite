@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/browser/LocalizableStrings.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2018 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\n// This file contains strings that get exported in the API so they can be localized\r\n\r\nlet promptLabelInternal = 'Terminal input';\r\nconst promptLabel = {\r\n  get: () => promptLabelInternal,\r\n  set: (value: string) => promptLabelInternal = value\r\n};\r\n\r\nlet tooMuchOutputInternal = 'Too much output to announce, navigate to rows manually to read';\r\nconst tooMuchOutput = {\r\n  get: () => tooMuchOutputInternal,\r\n  set: (value: string) => tooMuchOutputInternal = value\r\n};\r\n\r\nexport {\r\n  promptLabel,\r\n  tooMuchOutput\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAOA,IAAI,sBAAsB;AAC1B,MAAM,cAAc;AAAA,EAClB,KAAK,MAAM;AAAA,EACX,KAAK,CAAC,UAAkB,sBAAsB;AAChD;AAEA,IAAI,wBAAwB;AAC5B,MAAM,gBAAgB;AAAA,EACpB,KAAK,MAAM;AAAA,EACX,KAAK,CAAC,UAAkB,wBAAwB;AAClD;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/Types.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2022 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nexport interface ILigatureOptions {\r\n  fallbackLigatures: string[];\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": []
+}

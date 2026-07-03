@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/Types.ts"],
+  "sourcesContent": ["/**\r\n * Copyright (c) 2018 The xterm.js authors. All rights reserved.\r\n * @license MIT\r\n */\r\n\r\nimport { ISelectionRenderModel } from 'browser/renderer/shared/Types';\r\nimport { CursorInactiveStyle, CursorStyle } from 'common/Types';\r\n\r\nexport interface IRenderModel {\r\n  cells: Uint32Array;\r\n  lineLengths: Uint32Array;\r\n  selection: ISelectionRenderModel;\r\n  cursor?: ICursorRenderModel;\r\n}\r\n\r\nexport interface ICursorRenderModel {\r\n  x: number;\r\n  y: number;\r\n  width: number;\r\n  style: CursorStyle | CursorInactiveStyle;\r\n  cursorWidth: number;\r\n  dpr: number;\r\n}\r\n\r\nexport interface IWebGL2RenderingContext extends WebGLRenderingContext {\r\n  vertexAttribDivisor(index: number, divisor: number): void;\r\n  createVertexArray(): IWebGLVertexArrayObject;\r\n  bindVertexArray(vao: IWebGLVertexArrayObject): void;\r\n  drawElementsInstanced(mode: number, count: number, type: number, offset: number, instanceCount: number): void;\r\n}\r\n\r\nexport interface IWebGLVertexArrayObject {\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../test/playwright.config.ts"],
+  "sourcesContent": ["import { PlaywrightTestConfig } from '@playwright/test';\r\n\r\nconst config: PlaywrightTestConfig = {\r\n  testDir: '.',\r\n  timeout: 10000,\r\n  projects: [\r\n    {\r\n      name: 'ChromeStable',\r\n      use: {\r\n        browserName: 'chromium',\r\n        channel: 'chrome'\r\n      }\r\n    },\r\n    {\r\n      name: 'FirefoxStable',\r\n      use: {\r\n        browserName: 'firefox'\r\n      }\r\n    },\r\n    {\r\n      name: 'WebKit',\r\n      use: {\r\n        browserName: 'webkit'\r\n      }\r\n    }\r\n  ],\r\n  reporter: 'list',\r\n  webServer: {\r\n    command: 'npm run start',\r\n    port: 3000,\r\n    timeout: 120000,\r\n    reuseExistingServer: !process.env.CI\r\n  }\r\n};\r\nexport default config;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,MAAM,SAA+B;AAAA,EACnC,SAAS;AAAA,EACT,SAAS;AAAA,EACT,UAAU;AAAA,IACR;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,QACH,aAAa;AAAA,QACb,SAAS;AAAA,MACX;AAAA,IACF;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,QACH,aAAa;AAAA,MACf;AAAA,IACF;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,KAAK;AAAA,QACH,aAAa;AAAA,MACf;AAAA,IACF;AAAA,EACF;AAAA,EACA,UAAU;AAAA,EACV,WAAW;AAAA,IACT,SAAS;AAAA,IACT,MAAM;AAAA,IACN,SAAS;AAAA,IACT,qBAAqB,CAAC,QAAQ,IAAI;AAAA,EACpC;AACF;AACA,IAAO,4BAAQ;",
+  "names": []
+}
