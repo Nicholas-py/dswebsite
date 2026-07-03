@@ -1,6 +1,6 @@
-import { Terminal } from '../vendor/xterm-fork';
-import { WebglAddon } from '../vendor/xterm-fork/addons/addon-webgl';
-import { FitAddon } from '../vendor/xterm-fork/addons/addon-fit';
+import { Terminal } from '@xterm/xterm';
+import { WebglAddon } from '@xterm/addon-webgl';
+import { FitAddon } from '@xterm/addon-fit';
 
 import { DSKernel } from './dsKernel';
 import { DSStream } from './dsStream';

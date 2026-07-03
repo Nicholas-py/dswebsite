@@ -61,6 +61,12 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+        alias: {
+            '@xterm/xterm': path.resolve(__dirname, 'vendor/xterm-fork'),
+            '@xterm/addon-webgl': path.resolve(__dirname, 'vendor/xterm-fork/addons/addon-webgl'),
+            '@xterm/addon-fit': path.resolve(__dirname, 'vendor/xterm-fork/addons/addon-fit'),
+        },
+
     },
 };
 

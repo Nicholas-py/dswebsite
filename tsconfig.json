@@ -12,7 +12,14 @@
     "target": "es2020",
     "allowJs": true,
     "moduleResolution": "node",
-    "preserveSymlinks": true
+    "preserveSymlinks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@xterm/xterm": ["vendor/xterm-fork"],
+      "@xterm/addon-webgl": ["vendor/xterm-fork/addons/addon-webgl"],
+      "@xterm/addon-fit": ["vendor/xterm-fork/addons/addon-fit"]
+    }
+
   },
   "files": ["src/index.ts","src/declarations.d.ts"]
 }
