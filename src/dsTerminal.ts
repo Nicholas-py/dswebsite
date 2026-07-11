@@ -174,10 +174,10 @@ export class DSTerminal {
 
         // Set the font color using the theme property
         t.options.theme = {
-            foreground: '#00ffff', // Green font color
+            foreground: '#00d4d4', // "Green" font color
             background: '#000000', // Black background
             brightGreen: '#a0ffa0',
-            green: '#00ffff'
+            green: '#00d4d4'
         };
 
         // Call resize directly (no propagation because we're booting)
