@@ -28,7 +28,7 @@ else
     echo "no profile.dssh found."
     sleep 100
     reset
-    cat /etc/depsys.txt
-    cat /etc/motd.txt
+    splash
+    dsmdbrowser /data/site/main.dsmd
 endif
 
