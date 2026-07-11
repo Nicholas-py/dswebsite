@@ -490,15 +490,13 @@ class CodeBlock extends DSMDBlock {
     // Fully custom renderer
     render(width: number, rows: DSMDRow[]): void {
         super.render(width, rows);
+        console.log(rows)
         this.rawlines.forEach((line) => {
             const row = new DSMDRow(width, this);
             const doc = this.doc;
             row.length = width;
             row.text = line.slice(0, width);
             row.text = row.text.padEnd(width);
-            row.text = setattr(`${doc.codefgcolor};${doc.codebgcolor}`) +
-                row.text +
-                setattr(`${this.doc.fgcolor};${this.doc.bgcolor}`);
             rows.push(row);
         });
     };
