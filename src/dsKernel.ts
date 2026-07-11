@@ -116,16 +116,17 @@ export class DSKernel {
         const baudWrite = async (text: string) => {
             if (silentboot) {
                 // Ignore output
-            } else if (slowboot) {
-                await t.baudWrite(text);
-            } else {
-                this.terminal.write(text);
+            }
+            else {
+                t.baudWrite(text)
             }
         };
 
 
         try {
             if (bootcount == 0) {
+                t.baud = 1200;
+                await sleep(1000)
                 await baudWrite(`New terminal detected\n`);
                 await baudWrite(`Doing first time configuration\n\n`);
             }

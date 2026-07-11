@@ -10,25 +10,29 @@ mount dsidbfs depsys_local_fs /local
 
 #Checking for the existence of the /local/home directory
 if [-d /local/home]
+    #Checking for the existence of a profile.dssh file
+    if [-f /local/home/profile.dssh]
+        #If it exists, run profile.dssh as a script
+        source /local/home/profile.dssh
+    else
+        #Otherwise, display the default startup text (stored in depsys.txt and motd.txt)
+        echo "no profile.dssh found."
+        sleep 100
+        reset
+        splash 2000
+    endif
 else
     #If the directory does NOT exist, create one- enter the local folder, create "home", return to the parent folder
     echo "localfs: create home directory"
     cd local
     mkdir home
     cd ..
-endif
-
-
-#Checking for the existence of a profile.dssh file
-if [-f /local/home/profile.dssh]
-    #If it exists, run profile.dssh as a script
-    source /local/home/profile.dssh
-else
-    #Otherwise, display the default startup text (stored in depsys.txt and motd.txt)
     echo "no profile.dssh found."
-    sleep 100
-    reset
-    splash
-    dsmdbrowser /data/site/main.dsmd
+    splash 1000
 endif
+
+
+
+dsmdbrowser /data/site/main.dsmd
+
 

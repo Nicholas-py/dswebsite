@@ -490,7 +490,6 @@ class CodeBlock extends DSMDBlock {
     // Fully custom renderer
     render(width: number, rows: DSMDRow[]): void {
         super.render(width, rows);
-        console.log(rows)
         this.rawlines.forEach((line) => {
             const row = new DSMDRow(width, this);
             const doc = this.doc;
@@ -650,7 +649,6 @@ class DSMDRow {
     }
 
     addtoken(token: DSMDToken): DSMDRow {
-        // console.log(`${token.constructor.name} : ${this.word.length} : ${this.word.text}`);
         if (token instanceof ListItemToken) {
             // Reset indent
             this.indent = 0;
